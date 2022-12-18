@@ -105,8 +105,16 @@ button.addEventListener("click", () => {
 });
 
 copyButton.addEventListener("click", () => {
-  const userNameInTable = tableOutput.value;
-  tableOutput.value = 10;
+  const dataToCopy = outputBox.value;
+  async function copyContent() {
+    try {
+      await navigator.clipboard.writeText(dataToCopy);
+      console.log(dataToCopy);
+    } catch (err) {
+      console.log("error");
+    }
+  }
+  copyContent();
 });
 
 /////////////////////////////
