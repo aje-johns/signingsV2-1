@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signings Allocator V2</title>
+  <style>
+    .sliderValue {
+      border: none;
+    }
+
+    .textarea textarea {
+      width: 100%;
+      height: 50vh;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    button {
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    .user-input {
+      text-align: center;
+      border: 2px solid grey;
+      width: 35%;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+</head>
+
+<body>
+  <div class="flex">
+    <!-- Geting the excel sheet Input -->
+
+    <div class="user-input">
+      <h4>Select Number of Allocations</h4>
+      <input type="range" min="1" max="30" value="0" id="numberOfAllocations" />
+
+      <!-- <input type="text" id="sliderValue" /> -->
+      <h1 id="sliderValue">0</h1>
+      <div class="textarea">
+        <label for="">
+          Input Value
+        </label>
+        <textarea
+          placeholder="Drag the slider above to select the number of users, after that paste the UMR here, then fill the pop up window with the user name and Then click on the 'click me' button below "
+          name="" id="inputValues"></textarea>
+      </div>
+      <button id="button">Click Me</button>
+    </div>
+
+    <div>
+      <div class="textarea">
+        <label for="">Output Value</label>
+        <textarea name="" id="arrayOutput"></textarea>
+      </div>
+      <button id="copy">Copy Allocation</button>
+    </div>
+
+    <table id="outputTable">
+      <thead>
+        <tr>
+          <td>UMR</td>
+          <td id="tableUserName">User Name</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
