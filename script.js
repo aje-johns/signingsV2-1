@@ -83,7 +83,7 @@ button.addEventListener("click", () => {
   var userArray = getUserList(numberOfUsers);
   var inputUMR = textareaInput.value.split("\n");
   const userObj = createUserObj(userArray);
-  const umrWitNoBrokerCode = removeBrokerCode(inputUMR, 2);
+  const umrWitNoBrokerCode = removeBrokerCode(inputUMR, 5);
   const umrAndDupicate = getRepetetion(umrWitNoBrokerCode);
   allocate(umrAndDupicate, userObj);
   const finalAllocation = swap(userObj, inputUMR);
