@@ -87,6 +87,9 @@ button.addEventListener("click", () => {
   const umrAndDupicate = getRepetetion(umrWitNoBrokerCode);
   allocate(umrAndDupicate, userObj);
   const finalAllocation = swap(userObj, inputUMR);
+  
+  //WROTE IN GITHUB
+  
 
   finalAllocation.forEach((item) => {
     outputBox.innerHTML += `${item} \n`;
@@ -180,6 +183,7 @@ function allocate(umrAndDupicate, userObj) {
     }
     // });//end of forEach()
   }
+  console.log(userObj);
 }
 
 function createUserObj(userArray) {
