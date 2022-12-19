@@ -183,7 +183,6 @@ function allocate(umrAndDupicate, userObj) {
     }
     // });//end of forEach()
   }
-  console.log(userObj);
 }
 
 function createUserObj(userArray) {
